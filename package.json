@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "autoprefixer": "^9.8.6",
     "dotenv": "^8.2.0",
+    "notistack": "^0.9.17",
     "postcss-cli": "^7.1.1",
     "pouchy-store": "^0.1.7",
     "react": "^16.13.1",
@@ -19,15 +21,15 @@
   "scripts": {
     "build:css": "postcss ./src/styles/tailwind.css -o ./src/styles/index.css",
     "watch:css": "postcss ./src/styles/tailwind.css -o ./src/styles/index.css",
-    "start": "yarn run watch:css && react-scripts start",
-    "build": "yarn run build:css && react-scripts build",
+    "start": "npm run watch:css && react-scripts start",
+    "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier \"**/*.{js,jsx,css,json}\"",
-    "format": "yarn run prettier -- --write",
+    "format": "npm run prettier -- --write",
     "lint": "eslint src",
-    "lint:fix": "yarn run lint -- --fix",
-    "validate": "yarn run prettier -- --list-different && yarn run lint"
+    "lint:fix": "npm run lint -- --fix",
+    "validate": "npm run prettier -- --list-different && npm run lint"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -66,8 +68,8 @@
   },
   "lint-staged": {
     "**/*.{js,jsx}": [
-      "yarn run lint",
-      "yarn run format",
+      "npm run lint",
+      "npm run format",
       "git add"
     ]
   }
