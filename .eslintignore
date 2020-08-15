@@ -1,0 +1,6 @@
+!.atom-build.js
+node_modules
+package-lock.json
+package.json
+build
+public
